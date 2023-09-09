@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code challenge 3 Bonus 1</title>
+</head>
+<script>
+    var dolphinsPoint = [97, 112, 101]
+    var koalasPoint = [109, 95, 123]
+    var sumDolphins = dolphinsPoint.reduce((par, a) => {
+        return par + a
+    })
+    var sumKoalas = koalasPoint.reduce((par, a) => {
+        return par + a
+    })
+    var avgDolphin = sumDolphins / dolphinsPoint.length
+    var avgKoalas = sumKoalas / koalasPoint.length
+    var win = avgDolphin > avgKoalas
+    console.log("Dolphins's average point (", avgDolphin, ")")
+    console.log("Koalas's average point (", avgKoalas, ")")
+    if (win&&avgDolphin>=100) {
+        console.log("Dolphins is win")
+    } else if(!win&&avgKoalas>=100){
+        console.log("Koalas is win")
+    }else{
+        console.log("No one is win")
+    }
+
+</script>
+<body>
+    
+</body>
+</html>
